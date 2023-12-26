@@ -14,7 +14,7 @@ struct StandingTableView:View {
     let competition: Competition
     
     var body: some View {
-        Text("Hello, World")
+        Text("Football Stats")
     }
 }
 
