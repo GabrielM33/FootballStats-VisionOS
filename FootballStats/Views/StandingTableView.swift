@@ -6,3 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
+import XCAFootballDataClient
+
+struct StandingTableView:View {
+    
+    let competition: Competition
+    
+    var body: some View {
+        Text("Hello, World")
+    }
+}
+

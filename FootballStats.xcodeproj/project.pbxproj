@@ -13,6 +13,8 @@
 		AFD6B2E52B3B6291008190EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD6B2E42B3B6291008190EC /* Assets.xcassets */; };
 		AFD6B2E82B3B6291008190EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD6B2E72B3B6291008190EC /* Preview Assets.xcassets */; };
 		AFD6B2F32B3B6291008190EC /* FootballStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6B2F22B3B6291008190EC /* FootballStatsTests.swift */; };
+		AFD6B2FE2B3B63A8008190EC /* XCAFootballDataClient in Frameworks */ = {isa = PBXBuildFile; productRef = AFD6B2FD2B3B63A8008190EC /* XCAFootballDataClient */; };
+		AFD6B3002B3B655C008190EC /* StandingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6B2FF2B3B655C008190EC /* StandingTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 		AFD6B2E92B3B6291008190EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFD6B2EE2B3B6291008190EC /* FootballStatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballStatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD6B2F22B3B6291008190EC /* FootballStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballStatsTests.swift; sourceTree = "<group>"; };
+		AFD6B2FF2B3B655C008190EC /* StandingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD6B2DF2B3B6290008190EC /* RealityKitContent in Frameworks */,
+				AFD6B2FE2B3B63A8008190EC /* XCAFootballDataClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +82,7 @@
 		AFD6B2DB2B3B6290008190EC /* FootballStats */ = {
 			isa = PBXGroup;
 			children = (
+				AFD6B3012B3B6569008190EC /* Views */,
 				AFD6B2E02B3B6290008190EC /* FootballStatsApp.swift */,
 				AFD6B2E22B3B6290008190EC /* ContentView.swift */,
 				AFD6B2E42B3B6291008190EC /* Assets.xcassets */,
@@ -111,6 +116,14 @@
 			path = FootballStatsTests;
 			sourceTree = "<group>";
 		};
+		AFD6B3012B3B6569008190EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFD6B2FF2B3B655C008190EC /* StandingTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,6 +142,7 @@
 			name = FootballStats;
 			packageProductDependencies = (
 				AFD6B2DE2B3B6290008190EC /* RealityKitContent */,
+				AFD6B2FD2B3B63A8008190EC /* XCAFootballDataClient */,
 			);
 			productName = FootballStats;
 			productReference = AFD6B2D92B3B6290008190EC /* FootballStats.app */;
@@ -180,6 +194,9 @@
 				Base,
 			);
 			mainGroup = AFD6B2D02B3B6290008190EC;
+			packageReferences = (
+				AFD6B2FC2B3B63A8008190EC /* XCRemoteSwiftPackageReference "XCAFootballDataClient" */,
+			);
 			productRefGroup = AFD6B2DA2B3B6290008190EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -214,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD6B3002B3B655C008190EC /* StandingTableView.swift in Sources */,
 				AFD6B2E32B3B6290008190EC /* ContentView.swift in Sources */,
 				AFD6B2E12B3B6290008190EC /* FootballStatsApp.swift in Sources */,
 			);
@@ -479,10 +497,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		AFD6B2FC2B3B63A8008190EC /* XCRemoteSwiftPackageReference "XCAFootballDataClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/XCAFootballDataClient";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		AFD6B2DE2B3B6290008190EC /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
+		};
+		AFD6B2FD2B3B63A8008190EC /* XCAFootballDataClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFD6B2FC2B3B63A8008190EC /* XCRemoteSwiftPackageReference "XCAFootballDataClient" */;
+			productName = XCAFootballDataClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
